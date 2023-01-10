@@ -43,7 +43,7 @@ const getClientById = async(req, res) => {
     console.log(client);
 }
 
-const addOrder = async(req, res) => {
+const changeClientOrder = async(req, res) => {
     const client = await Client.findById(req.params.clientId);
     client.order = req.params.orderId;
     try {
@@ -88,5 +88,5 @@ module.exports = {
     getClientById,
     updateClientById,
     removeClient,
-    addOrder
+    changeClientOrder
 }
