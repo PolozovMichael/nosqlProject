@@ -10,7 +10,7 @@ const clientSchema = new mongoose.Schema({
         default: Date.now()
     },
     order: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: [mongoose.Schema.Types.ObjectId],
         ref: 'Order'
     },
     password: {

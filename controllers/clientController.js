@@ -44,19 +44,8 @@ const getClientById = async(req, res) => {
 }
 
 const addOrder = async(req, res) => {
-    try {
-        const client = await Client
-        .updateOne(
-            {_id : req.params.clientId},
-            {
-                $set: {
-                    order: req.params.orderId
-                }
-            }
-        )
-    } catch (e) {
-        console.error(e.message);
-    }
+    const client = await Client.findById(req.params.clientId);
+    
 }
 
 const updateClientById = async(req, res) => {

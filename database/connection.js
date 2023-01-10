@@ -9,5 +9,4 @@ const connect = () => {
         .catch((e) => console.error(e.message));
 }
 
-
 module.exports = connect;
